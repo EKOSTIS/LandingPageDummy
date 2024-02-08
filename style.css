@@ -1,0 +1,243 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+/*main styling*/
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8em;
+}
+
+a {
+    display: inline;
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+header {
+    margin: auto;
+    max-width: fit-content;
+    overflow: auto;
+    padding: 10px;
+  }
+   */
+.text-primary {
+    color: white;
+  }
+  
+  
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #000000;
+    /* background: #333; */
+    padding: 13px 20px;
+    cursor: pointer;
+    border-radius: 40px;
+    background: var(--Yellow, #F2C94C);
+  }
+
+.btn-2{
+    color: #F2C94C;
+}  
+
+.btn:hover {
+    background: #f7c08a;
+    color: #333;
+  }
+  
+
+#navbar {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    overflow: auto;
+  }
+
+#navbar .container{
+  display: flex;
+  
+  
+}
+
+#navbar .logo{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}  
+
+#navbar .title{
+  display: flex;
+}
+
+#navbar .title2{
+  font-size: 80%;
+} 
+
+#navbar a {
+    color: #fff;
+  }
+  
+#navbar h1 {
+    float: left;
+    padding-top: 20px;
+    display: flex;
+  }
+  
+#navbar ul {
+  display: grid;
+  grid: 100px / auto auto auto auto;
+    list-style: none;
+    float: right;
+  }
+  
+#navbar ul li {
+    float: right;
+  }
+  
+#navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: right;
+  }
+  
+#navbar ul li a:hover, 
+#navbar ul li a.current {
+    color: #000000;
+  }
+
+header {
+    background-color: #2F80ED;
+}
+ 
+
+#showcase {
+    height: 600px;
+    width: 100%;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+#showcase .showcase-content{
+  display: inline-flex;
+  align-items: center;
+  gap: 80px;
+  width: 60%;
+}
+
+#showcase .info{
+  float: left;
+  width: 50%;
+  flex-direction: column;
+
+}
+
+#showcase .info-img{
+  float: right;
+  width: 50%;
+  
+}
+
+.AboutUs{
+  width: auto;
+  height: 659px;
+  flex-shrink: 0;
+}
+
+.main{
+  color: #95B2D8;
+  text-align: center;
+  padding-top: 30px;
+
+}
+
+.box{
+  display: flex;
+  gap: 10px;
+}
+
+.left-box{
+  float: left;
+}
+
+
+.right-box{
+  float: right;
+  align-items: center;
+  
+}
+
+.right-box {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.btn-More{
+  color: #000000;
+}
+
+.form{
+  width: auto;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.left-form{
+  float: left;
+  align-items: center;
+  padding-top: 100px;
+  padding-left: 50px;
+  background-color: #F0F6FE;
+  width: 50%;
+  height: auto;
+}
+
+.input-group{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: rgba(230, 230, 230, 0.6);
+  font-size: 10rem;
+  margin-bottom: 22px;
+  transition: .3s;
+  
+}
+
+.right-form{
+  float: right;
+  width: 50%;
+  height: 300px;
+  background-color: #2F80ED;
+}
+
+.right-form img{
+  width: 84%;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+
+
+.footer{
+  background-color: #22426D;
+  width: auto;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+
+
+
+

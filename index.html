@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingPage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <h1 class="logo"><a href="index.html"><img src="images/Handyman.png" alt=""></a></h1>
+                <h2 class="title">Round Rock<h2 class="title2">Handyman services</h2></h2>
+                <ul>
+                    <li><a class="current" href="index.html">Home</a></li>
+                    <li><a href="Services.html">Sercices</a></li>
+                    <li><a href="Button.html">Button</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="showcase">
+            <div class="container">
+                <div class="showcase-content">
+                    <div class="info">
+                        <h1>Handyman</h1><h1>services</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis ducimus voluptatibus omnis, eum officiis.</p>
+                        <a class="btn" href="HelpMe.html">Help Me</a>
+                        <a class="btn-2" href="HelpMe.html">Help Me</a>
+                    </div>
+                    <div class="info-img"><img src="images/Rectangle.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="AboutUs">
+
+        <div class="main">
+            <h1>About Us</h1>
+            <h3>Lorem, ipsum dolor.</h3>
+        </div>
+
+        <div class="box">
+
+            <div class="left-box">
+                <img src="images/Rectangle2.png" alt="">
+            </div>
+
+            <div class="right-box">
+                <div>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nisi, nobis ipsa culpa incidunt quo.</li>
+                </div>
+                <div>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nisi, nobis ipsa culpa incidunt quo.</li>
+                </div>
+                <div>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nisi, nobis ipsa culpa incidunt quo.</li>
+                </div>
+                <div>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nisi, nobis ipsa culpa incidunt quo.</li>
+                </div>
+                <a class="btn" href="HelpMe.html">Help Me</a>
+                <a class="btn-More" href="#">More Information</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="form">
+    
+            <div class="right-form">
+                <img src="images/Rectangle.png" alt="">
+                
+            </div>
+            <div class="left-form">
+                <form>    
+                    <div id="input-group">
+                        <input type="text" placeholder="your name" id="contact-name" onkeyup="validateName()">
+                        <span id="name-error"></span>
+                    </div>
+                    <div id="input-group">
+                        <input type="phone" placeholder="phone number" id="contact-email" onkeyup="validatePhone()">
+                        <span id="email-error"></span>
+                    </div>
+                    <div id="input-group">
+                        <input type="email" placeholder="E-mail" id="contact-phone" onkeyup="validateEmail()">
+                        <span id="phone-error"></span>
+                    </div>
+                    <div id="input-group">
+                        <textarea placeholder="message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                        <span id="message-error"></span>
+                    </div>
+                    <button class="btn" onclick="return validateForm()">Submit</button>
+                    <span id="submit-error"></span>
+                </form>
+            </div>
+        
+    </section>
+
+    <section class="footer">
+        
+    </section>
+
+</body>
+
+<script>
+var nameError = document.getElementById('name-error')
+var emailError = document.getElementById('email-error')
+var phoneError = document.getElementById('phone-error')
+var messageError = document.getElementById('message-error')
+var submitError = document.getElementById('submit-error')
+
+function validateName(){
+    var name = document.getElementById('contact-name').value;
+    
+    if(name.length == 0){
+        nameError.innerHTML = 'name is required';
+        return false;
+    }
+    if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+        nameError.innerHTML = 'write full name';
+        return false;
+    }
+    nameError.innerHTML = 'valid';
+    return true;
+}
+
+function validateEmail(){
+    var email = document.getElementById('contact-email').value;
+
+    if(email.length == 0){
+        emailError.innerHTML = 'email is required'
+        return false;
+    }
+    if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML = 'email invalid'
+        return false;
+    }
+    emailError.innerHTML = 'valid'
+    return true;
+}
+
+function validatePhone(){
+    var phone = document.getElementById('contact-phone').value;
+
+    if(phone.length == 0){
+        phoneError.innerHTML = 'phone num is required';
+        return false;
+    }
+    if(phone.length !== 10){
+        phoneError.innerHTML = 'phone num should be 10 digits';
+        return false;
+    }
+    if(!phone.match(/^[0-9]{10}$/)){
+        phoneError.innerHTML = 'phone num is required';
+        return false;
+    }
+    phoneError.innerHTML = 'valid'
+    return true;
+}
+
+function validateMessage(){
+    var message = document.getElementById('contact-message').value;
+    var required = 10;
+    var left = required - message.length;
+
+    if(left>0){
+        messageError.innerHTML = left + 'more characters required'
+        return false;
+    }
+    messageError.innerHTML = 'valid'
+    return true;
+}
+
+function validateForm(){
+    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+        submitError.style.display = 'block';
+        submitError.innerHTML = 'please fix error to submit!'
+        setTimeout(function(){submitError.style.display = 'none';},3000)
+        return false;
+    }
+}
+</script>
+</html>
